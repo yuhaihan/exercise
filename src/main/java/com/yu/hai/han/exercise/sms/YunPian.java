@@ -1,17 +1,15 @@
 package com.yu.hai.han.exercise.sms;
 
 import com.yu.hai.han.exercise.utils.HttpClientUtil;
-import com.yu.hai.han.exercise.utils.UUIDUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description:
+ * @description: 【云片】短信
  * @author: Gavin
  * @create: 2020-04-27 17:13
  * @Copyright: 2018~2020-04-27 17:13 www.clisia.cn. 保留所有权利。
@@ -28,7 +26,7 @@ public class YunPian {
     // 模板id
     private final static long TEL_ID = 3690484;
     // 手机号码
-    private final static String MOBILE = "15512810623";
+    private final static String MOBILE = "15931653207";
     // 查账户信息的http地址
     private static String URI_GET_USER_INFO = "https://sms.yunpian.com/v2/user/get.json";
 
@@ -54,7 +52,7 @@ public class YunPian {
 //    public static void main(String[] args) {
 //        try {
 //            getUserInfo();
-//            tplSendSms(APIKEY,TEL_ID,URLEncoder.encode(MOBILE_TEXT, ENCODING) + "=" + URLEncoder.encode(UUIDUtils.sixRandomNumber(), ENCODING),MOBILE);
+//            tplSendSms(APIKEY,TEL_ID, URLEncoder.encode(MOBILE_TEXT, ENCODING) + "=" + URLEncoder.encode(UUIDUtils.sixRandomNumber(), ENCODING),MOBILE);
 //
 //        } catch (Exception e){
 //            e.printStackTrace();
