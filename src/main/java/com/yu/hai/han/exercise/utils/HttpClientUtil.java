@@ -37,6 +37,7 @@ public class HttpClientUtil {
 
     /**
      * 发送GET请求
+     *
      * @param path
      * @param parametersBody
      * @return
@@ -51,7 +52,7 @@ public class HttpClientUtil {
         try {
             HttpResponse response = client.execute(get);
             int code = response.getStatusLine().getStatusCode();
-            if (code >= 400){
+            if (code >= 400) {
                 throw new RuntimeException((new StringBuilder()).append("Could not access protected resource. Server returned http code: ").append(code).toString());
             }
             return EntityUtils.toString(response.getEntity());
@@ -66,6 +67,7 @@ public class HttpClientUtil {
 
     /**
      * 发送POST请求（普通表单形式）
+     *
      * @param path
      * @param parametersBody
      * @return
@@ -78,6 +80,7 @@ public class HttpClientUtil {
 
     /**
      * 发送POST请求（JSON形式）
+     *
      * @param path
      * @param json
      * @return
@@ -90,6 +93,7 @@ public class HttpClientUtil {
 
     /**
      * 发送POST请求
+     *
      * @param path
      * @param mediaType
      * @param entity
@@ -139,12 +143,12 @@ public class HttpClientUtil {
                     NameValuePair pair = new BasicNameValuePair(param.getKey(), param.getValue());
                     paramList.add(pair);
                 }
-                method.setEntity(new UrlEncodedFormEntity(paramList,  "UTF-8"));
+                method.setEntity(new UrlEncodedFormEntity(paramList, "UTF-8"));
             }
             response = client.execute(method);
             HttpEntity entity = response.getEntity();
             if (entity != null) {
-                responseText = EntityUtils.toString((org.apache.http.HttpEntity) entity,  "UTF-8");
+                responseText = EntityUtils.toString((org.apache.http.HttpEntity) entity, "UTF-8");
             }
         } catch (Exception e) {
             e.printStackTrace();

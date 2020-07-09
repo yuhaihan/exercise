@@ -39,6 +39,7 @@ public class UUIDUtils {
 
     /**
      * 生成六位随机数
+     *
      * @return
      */
     public static String sixRandomNumber() {
@@ -56,6 +57,7 @@ public class UUIDUtils {
 
     /**
      * 生成随机数 (32位UUID)
+     *
      * @param number
      * @return
      */
@@ -68,6 +70,7 @@ public class UUIDUtils {
     /**
      * 获取当前时间字符串年月日时分秒
      * 格式：20191125114440
+     *
      * @return
      */
     private static String currentTimeStr() {

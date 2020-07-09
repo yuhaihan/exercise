@@ -22,7 +22,7 @@ public class YunPian {
     // 云片 apikey
     private final static String APIKEY = "02e551d2532e2fb4d014f1d0a2752bd6";
     // 短信内容
-    private final static String MOBILE_TEXT="#code#";
+    private final static String MOBILE_TEXT = "#code#";
     // 模板id
     private final static long TEL_ID = 3690484;
     // 手机号码
