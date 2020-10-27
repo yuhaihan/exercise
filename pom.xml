@@ -15,6 +15,9 @@
         <module>swagger</module>
         <module>fastdfs</module>
         <module>design-Pattern</module>
+        <module>rabbitmq</module>
+        <module>test</module>
+        <module>concurrent</module>
     </modules>
 
     <name></name>

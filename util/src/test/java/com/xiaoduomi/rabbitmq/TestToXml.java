@@ -1,4 +1,4 @@
-package com.xiaoduomi.test;
+package com.xiaoduomi.rabbitmq;
 
 import com.xiaoduomi.bean.xml.Samples;
 import com.xiaoduomi.bean.xml.TestXml;
