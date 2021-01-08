@@ -26,7 +26,7 @@ public class SwaggerConfig {
                 .select()
                 // 加上了@ApiOperation直接的类才会生成接口文档
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
-                // 此路径下的类才会生成接口文档
+                // 此路径下的类才会生成接口文档 TODO 需要修改
                 .apis(RequestHandlerSelectors.basePackage("com.yu.hai.han.exercise"))
                 .build();
     }

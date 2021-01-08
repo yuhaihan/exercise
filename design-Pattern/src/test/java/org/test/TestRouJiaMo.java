@@ -1,4 +1,4 @@
-package test;
+package org.test;
 
 import com.design.pattern.factory.Factory;
 import com.design.pattern.factory.Gift;

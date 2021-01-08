@@ -14,6 +14,9 @@ import java.sql.SQLOutput;
  */
 public class ThreadTest {
 
+    /**
+     * 集成Thread类 重写run方法。
+     */
     public static class ThreadClass extends Thread{
         @Override
         public void run() {
@@ -31,7 +34,9 @@ public class ThreadTest {
      * @param args
      */
     public static void main(String[] args) {
+        // 创建线程
         ThreadClass threadClass = new ThreadClass();
+        // 启动线程
         threadClass.start();
     }
 }

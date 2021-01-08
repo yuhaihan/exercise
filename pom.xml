@@ -3,12 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.3.RELEASE</version>
+        <relativePath/>
+    </parent>
 
-    <groupId>com.xiaoduomi</groupId>
-    <artifactId>Exercise</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <packaging>pom</packaging>
     <modules>
         <module>yunpian</module>
         <module>util</module>
@@ -18,17 +19,16 @@
         <module>rabbitmq</module>
         <module>test</module>
         <module>concurrent</module>
+        <module>java-1.8</module>
+        <module>elasticsearch</module>
     </modules>
 
-    <name></name>
     <description>yuhaihan</description>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
-        <relativePath/>
-    </parent>
+    <groupId>com.xiaoduomi</groupId>
+    <artifactId>Exercise</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
