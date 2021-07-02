@@ -21,6 +21,7 @@
         <module>concurrent</module>
         <module>java-1.8</module>
         <module>elasticsearch</module>
+        <module>extract</module>
     </modules>
 
     <description>yuhaihan</description>
