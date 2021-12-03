@@ -1,9 +1,7 @@
 package org.yhh.project.util;
 
 
-import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.extractor.WordExtractor;
-import org.apache.poi.hwpf.model.TextPieceTable;
 import org.apache.poi.poifs.filesystem.FileMagic;
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;

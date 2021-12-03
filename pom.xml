@@ -14,13 +14,12 @@
         <module>yunpian</module>
         <module>util</module>
         <module>swagger</module>
-        <module>fastdfs</module>
-        <module>design-Pattern</module>
+        <module>FastDFS</module>
+        <module>design-pattern</module>
         <module>rabbitmq</module>
         <module>test</module>
-        <module>concurrent</module>
         <module>java-1.8</module>
-        <module>elasticsearch</module>
+        <module>ElasticSearch</module>
         <module>extract</module>
     </modules>
 

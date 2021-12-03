@@ -1,7 +1,5 @@
 package org.yhh.project.pojo;
 
-import lombok.Data;
-
 import java.io.Serializable;
 
 /**
