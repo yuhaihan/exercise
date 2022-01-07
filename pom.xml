@@ -21,6 +21,7 @@
         <module>java-1.8</module>
         <module>ElasticSearch</module>
         <module>extract</module>
+        <module>jdbc</module>
     </modules>
 
     <description>yuhaihan</description>
