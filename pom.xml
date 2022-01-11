@@ -17,7 +17,6 @@
         <module>FastDFS</module>
         <module>design-pattern</module>
         <module>rabbitmq</module>
-        <module>test</module>
         <module>java-1.8</module>
         <module>ElasticSearch</module>
         <module>extract</module>
