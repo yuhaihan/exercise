@@ -1,4 +1,5 @@
-package org.test;
+package com.xiaoduomi.tiff;
+
 
 import com.sun.jimi.core.Jimi;
 import com.sun.jimi.core.JimiException;
@@ -16,27 +17,28 @@ import java.io.*;
 import java.util.Iterator;
 import java.util.stream.IntStream;
 
+
 /**
- * @ClassName: TestTfiChangePNG
+ * @ClassName: TfiChangePNG
  * @Description: TODO
  * @Author: Gavin
- * @Create: 2021-04-09 17:52
+ * @Create: 2022-01-11 10:51
  * @Version: 1.0
- * @Copyright: 2018~2021-04-09 17:52 www.clisia.cn. 保留所有权利。
+ * @Copyright: 2018~2022-01-11 10:51 www.clisia.cn. 保留所有权利。
  * 版权所有： 中科空间信息（廊坊）研究院。
  * 注意：本内容仅限于中科空间信息（廊坊）研究院内部传阅，禁止外泄以及用于其他的商业目的。
  */
-public class TestTfiChangePNG {
+public class TfiChangePNG {
 
-    public static void main(String[] args) {
-        // convertTiffToPng(new File("C:\\Users\\yhhus\\Desktop\\十二五系统测试数据\\植被待检验产品.tif"));
-        // changeTif2Jpg();
-        String INPUT_PATH = "C:\\Users\\yhhus\\Desktop\\十二五系统测试数据\\植被待检验产品.tif";
-        String OUTPUT_PATH = "C:\\Users\\yhhus\\Desktop\\十二五系统测试数据\\1-Beijing200204-Byte-7.png";
-        imageConvertToPNG(INPUT_PATH,OUTPUT_PATH,"max");
-
-
-    }
+    //public static void main(String[] args) {
+    //    // convertTiffToPng(new File("C:\\Users\\yhhus\\Desktop\\十二五系统测试数据\\植被待检验产品.tif"));
+    //    // changeTif2Jpg();
+    //    String INPUT_PATH = "C:\\Users\\yhhus\\Desktop\\十二五系统测试数据\\植被待检验产品.tif";
+    //    String OUTPUT_PATH = "C:\\Users\\yhhus\\Desktop\\十二五系统测试数据\\1-Beijing200204-Byte-7.png";
+    //    imageConvertToPNG(INPUT_PATH,OUTPUT_PATH,"max");
+    //
+    //
+    //}
 
     public static void convertTiffToPng(File file) {
         try {
