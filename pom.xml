@@ -16,7 +16,7 @@
         <module>swagger</module>
         <module>FastDFS</module>
         <module>design-pattern</module>
-        <module>rabbitmq</module>
+        <module>middleware</module>
         <module>java-1.8</module>
         <module>ElasticSearch</module>
         <module>extract</module>
