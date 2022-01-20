@@ -13,8 +13,6 @@
     <modules>
         <module>yunpian</module>
         <module>util</module>
-        <module>swagger</module>
-        <module>FastDFS</module>
         <module>design-pattern</module>
         <module>middleware</module>
         <module>java-1.8</module>
