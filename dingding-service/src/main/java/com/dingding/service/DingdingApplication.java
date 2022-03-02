@@ -1,16 +1,13 @@
-package com.exercies.es;
+package com.dingding.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author yhhus
- */
 @SpringBootApplication
-public class ElasticsearchApplication {
+public class DingdingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ElasticsearchApplication.class, args);
+        SpringApplication.run(DingdingApplication.class, args);
     }
 
 }

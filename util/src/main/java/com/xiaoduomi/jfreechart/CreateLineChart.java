@@ -8,10 +8,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.NumberFormat;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
 
+import com.xiaoduomi.http.Serie;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartUtilities;
@@ -75,17 +75,17 @@ public class CreateLineChart {
     }
 
 
-    public static void main(String[] args) {
-        String tile = "光谱曲线图";
-        String xTile = "波长（单位/nm）";
-        String yTile = "地表反射率值";
-        String filepath = "C:\\Users\\yhhus\\Desktop\\dbfsl\\光谱曲线图-1.png";
-        String[] categories = {"0", "200", "400", "600", "800", "1000", "1200", "1400", "1600", "1800", "2000", "2250"};
-        Vector<Serie> series = new Vector<>();
-        series.add(new Serie("波长        \n\r地表反射率", new Double[]{0.1, 0.5, 0.4, 0.2, 0.0, 0.3, 0.6, 0.5, 0.4, 0.1, 0.6, 0.4}));
-
-        CreateNewLineChartForPng(tile, xTile, yTile, filepath, Arrays.asList(categories), series, 550, 350);
-    }
+    //public static void main(String[] args) {
+    //    String tile = "光谱曲线图";
+    //    String xTile = "波长（单位/nm）";
+    //    String yTile = "地表反射率值";
+    //    String filepath = "C:\\Users\\yhhus\\Desktop\\dbfsl\\光谱曲线图-1.png";
+    //    String[] categories = {"0", "200", "400", "600", "800", "1000", "1200", "1400", "1600", "1800", "2000", "2250"};
+    //    Vector<Serie> series = new Vector<>();
+    //    series.add(new Serie("波长        \n\r地表反射率", new Double[]{0.1, 0.5, 0.4, 0.2, 0.0, 0.3, 0.6, 0.5, 0.4, 0.1, 0.6, 0.4}));
+    //
+    //    CreateNewLineChartForPng(tile, xTile, yTile, filepath, Arrays.asList(categories), series, 550, 350);
+    //}
 
 
     /**

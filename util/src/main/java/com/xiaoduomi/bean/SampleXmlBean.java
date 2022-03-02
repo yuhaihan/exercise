@@ -99,47 +99,47 @@ public class SampleXmlBean implements Serializable {
      * @param jsonObject SampleXmlBean 实体类转换的 json字符串
      * @return
      */
-    public static SampleXmlBean jsonStr2SampleXmlBean(JSONObject jsonObject){
-        System.out.println("hhh");
-
-        // GeometryDef
-        if (jsonObject.containsKey("Samples")){
-            SampleXmlBean sampleXmlBean = new SampleXmlBean();
-            GeometryDef sGeo = new GeometryDef();
-            JSONObject geometrydef = jsonObject.getJSONObject("Samples").getJSONObject("GeometryDef");
-            if(geometrydef != null && geometrydef.containsKey("CoordSysStr")){
-                sGeo.setCoordSysStr(geometrydef.getString("CoordSysStr"));
-                sampleXmlBean.setGeometryDef(sGeo);
-            }
-
-            RegionsOfInterest sri = new RegionsOfInterest();
-            JSONArray regions = jsonObject.getJSONObject("Samples").getJSONObject("RegionsOfInterest")
-                    .getJSONArray("Region");
-            if (  regions != null){
-                List<Region> regionList = new ArrayList<>();
-                for (int i=0; i< regions.size(); i++){
-                    Region region = new Region();
-                    JSONArray polygons = regions.getJSONObject(i).getJSONArray("Polygon");
-                    if (polygons != null){
-                        List<Polygon> polygonList = new ArrayList<>();
-                        for (int k=0; k<polygons.size();k++){
-                            //polygonList.add(new SampleXmlBean.Polygon(polygons.getJSONObject(k).getString("Polygon")));
-                            //sdae与svm算法样本参数适用如下方式
-                            polygonList.add(new Polygon(polygons.get(k).toString()));
-                        }
-                        region.setPolygons(polygonList);
-                    }   
-                    region.setName(regions.getJSONObject(i).getString("-name"));
-                    region.setColor(regions.getJSONObject(i).getString("-color"));
-                    regionList.add(region);
-                }
-                sri.setRegions(regionList);
-            }
-            sampleXmlBean.setRegionsOfInterest(sri);
-            return sampleXmlBean;
-        }
-        return null;
-    }
+    //public static SampleXmlBean jsonStr2SampleXmlBean(JSONObject jsonObject){
+    //    System.out.println("hhh");
+    //
+    //    // GeometryDef
+    //    if (jsonObject.containsKey("Samples")){
+    //        SampleXmlBean sampleXmlBean = new SampleXmlBean();
+    //        GeometryDef sGeo = new GeometryDef();
+    //        JSONObject geometrydef = jsonObject.getJSONObject("Samples").getJSONObject("GeometryDef");
+    //        if(geometrydef != null && geometrydef.containsKey("CoordSysStr")){
+    //            sGeo.setCoordSysStr(geometrydef.getString("CoordSysStr"));
+    //            sampleXmlBean.setGeometryDef(sGeo);
+    //        }
+    //
+    //        RegionsOfInterest sri = new RegionsOfInterest();
+    //        JSONArray regions = jsonObject.getJSONObject("Samples").getJSONObject("RegionsOfInterest")
+    //                .getJSONArray("Region");
+    //        if (  regions != null){
+    //            List<Region> regionList = new ArrayList<>();
+    //            for (int i=0; i< regions.size(); i++){
+    //                Region region = new Region();
+    //                JSONArray polygons = regions.getJSONObject(i).getJSONArray("Polygon");
+    //                if (polygons != null){
+    //                    List<Polygon> polygonList = new ArrayList<>();
+    //                    for (int k=0; k<polygons.size();k++){
+    //                        //polygonList.add(new SampleXmlBean.Polygon(polygons.getJSONObject(k).getString("Polygon")));
+    //                        //sdae与svm算法样本参数适用如下方式
+    //                        polygonList.add(new Polygon(polygons.get(k).toString()));
+    //                    }
+    //                    region.setPolygons(polygonList);
+    //                }
+    //                region.setName(regions.getJSONObject(i).getString("-name"));
+    //                region.setColor(regions.getJSONObject(i).getString("-color"));
+    //                regionList.add(region);
+    //            }
+    //            sri.setRegions(regionList);
+    //        }
+    //        sampleXmlBean.setRegionsOfInterest(sri);
+    //        return sampleXmlBean;
+    //    }
+    //    return null;
+    //}
 
 
 }

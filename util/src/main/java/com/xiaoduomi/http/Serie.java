@@ -1,4 +1,4 @@
-package com.xiaoduomi.jfreechart;
+package com.xiaoduomi.http;
 
 import lombok.Data;
 
@@ -7,7 +7,6 @@ import java.util.Vector;
 
 /**
  * @ClassName: Serie
- * @Description: TODO
  * @Author: Gavin
  * @Create: 2022-01-10 15:51
  * @Version: 1.0

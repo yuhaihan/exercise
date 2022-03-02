@@ -131,7 +131,7 @@ public class HttpClientUtil {
      * @return 提交响应
      */
 
-    public static String post(String url, Map<String, String> paramsMap) {
+    public static String post(String url, Map<String, Object> paramsMap) {
         CloseableHttpClient client = HttpClients.createDefault();
         String responseText = "";
         CloseableHttpResponse response = null;
@@ -139,8 +139,8 @@ public class HttpClientUtil {
             HttpPost method = new HttpPost(url);
             if (paramsMap != null) {
                 List<NameValuePair> paramList = new ArrayList<NameValuePair>();
-                for (Map.Entry<String, String> param : paramsMap.entrySet()) {
-                    NameValuePair pair = new BasicNameValuePair(param.getKey(), param.getValue());
+                for (Map.Entry<String, Object> param : paramsMap.entrySet()) {
+                    NameValuePair pair = new BasicNameValuePair(param.getKey(), param.getValue().toString());
                     paramList.add(pair);
                 }
                 method.setEntity(new UrlEncodedFormEntity(paramList, "UTF-8"));
