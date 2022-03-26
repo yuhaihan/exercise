@@ -4,6 +4,7 @@ import org.apache.commons.codec.Charsets;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -34,6 +35,50 @@ import java.util.Map;
  * 注意：本内容仅限于中科空间信息（廊坊）研究院内部传阅，禁止外泄以及用于其他的商业目的。
  */
 public class HttpClientUtil {
+
+    public static String doGetRequestNoparam(String url, Map<String, String> headMap) {
+        // 获取连接客户端工具
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        String entityStr = null;
+        CloseableHttpResponse response = null;
+        try {
+            /*
+             * 由于GET请求的参数都是拼装在URL地址后方，所以我们要构建一个URL，带参数
+             */
+            URIBuilder uriBuilder = new URIBuilder(url);
+            // 根据带参数的URI对象构建GET请求对象
+            HttpGet httpGet = new HttpGet(uriBuilder.build());
+            /*
+             * 添加请求头信息
+             */
+            for (Map.Entry<String, String> header : headMap.entrySet()) {
+                httpGet.addHeader(header.getKey(), header.getValue());
+            }
+            CloseHttpUtil.setTimeOut(httpGet);
+            // 执行请求
+            response = httpClient.execute(httpGet);
+            // 获得响应的实体对象
+            HttpEntity entity = response.getEntity();
+            // 使用Apache提供的工具类进行转换成字符串
+            entityStr = EntityUtils.toString(entity, "UTF-8");
+        } catch (ClientProtocolException e) {
+            System.err.println("Http协议出现问题");
+            e.printStackTrace();
+        } catch (ParseException e) {
+            System.err.println("解析错误");
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            System.err.println("URI解析异常");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.println("IO异常");
+            e.printStackTrace();
+        } finally {
+            // 释放连接
+            CloseHttpUtil.close(response, httpClient);
+        }
+        return entityStr;
+    }
 
     /**
      * 发送GET请求

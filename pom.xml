@@ -16,9 +16,12 @@
         <module>design-pattern</module>
         <module>middleware</module>
         <module>ElasticSearch</module>
+        <module>ElasticJob</module>
         <module>extract</module>
         <module>jdbc</module>
         <module>dingding-service</module>
+        <module>covid19</module>
+        <module>powerjob</module>
     </modules>
 
     <description>yuhaihan</description>

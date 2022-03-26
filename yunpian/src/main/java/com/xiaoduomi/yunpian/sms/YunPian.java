@@ -1,6 +1,5 @@
 package com.xiaoduomi.yunpian.sms;
 
-//import com.xiaoduomi.httsp.HttpClientUtil;
 import com.xiaoduomi.http.HttpClientUtil;
 import com.xiaoduomi.uuid.UUIDUtils;
 import lombok.extern.slf4j.Slf4j;
